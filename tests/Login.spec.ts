@@ -26,6 +26,7 @@ test('sign up the account', async ({ browser }) => {
   await page.getByText('Continue').click();
   await page.getByText('What type of business do you have?').click();
   await page.locator('#inputLabel_1').click();
+  await page.locator('#inputLabel_1').click();
   await context.close();
 });
 
