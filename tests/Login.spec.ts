@@ -22,11 +22,12 @@ test('sign up the account', async ({ browser }) => {
   await page.getByRole('link', { name: 'Sign-Up' }).click();
   await page.getByText('Small business account(s)').click();
   //await page.locator('#Business').click();
-  await page.getByText('I am the business owner or authorized signer on all accounts.').click();
+  await page.locator('.ngp-form-label-visible card').click();
   await page.getByText('Continue').click();
-  await page.getByText('What type of business do you have?').click();
-  await page.locator('#inputLabel_1').click();
-  await page.locator('#inputLabel_1').click();
-  await context.close();
+  //await page.getByText('What type of business do you have?').click();
+  await page.locator('//input[@name="firstName"]').fill('jai');
+  await page.getByPlaceholder('Please enter an e-mail').fill('jai@example.com');
+  await page.locator('//input[@name="lastName"]').fill('king');
+  //await context.close();
 });
 
