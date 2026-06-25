@@ -14,7 +14,7 @@ declare const process: { env: { CI?: string | undefined } };
  * See https://playwright.dev/docs/test-configuration.
  */
 const config = defineConfig({
-  testDir: './tests',
+  testDir: './Mytests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
